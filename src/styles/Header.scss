@@ -1,0 +1,12 @@
+@import 'Colors';
+@import 'Fonts';
+
+header {
+    background: $lightBlue;
+    .logo {
+        text-align: center;
+        font-family: $saira;
+        font-size: 5rem;
+        color: $white;
+    }
+}
