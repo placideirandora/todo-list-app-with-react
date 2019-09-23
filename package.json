@@ -1,0 +1,38 @@
+{
+  "name": "todo-list-app-with-react",
+  "version": "1.0.0",
+  "description": "A front-end web application for managing/tracking your to-dos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/placideirandora/todo-list-app-with-react.js.git"
+  },
+  "keywords": [
+    "to-do",
+    "app",
+    "react.js"
+  ],
+  "author": "Placide IRANDORA",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/placideirandora/todo-list-app-with-react.js/issues"
+  },
+  "homepage": "https://github.com/placideirandora/todo-list-app-with-react.js#readme",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
