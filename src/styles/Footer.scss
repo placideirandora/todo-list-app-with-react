@@ -1,0 +1,11 @@
+@import 'Colors';
+@import 'Fonts';
+
+footer {
+    p {
+        text-align: center;
+        margin-top: 14rem;
+        font-size: 25px;
+        font-family: $vollkorn;
+    }
+}
