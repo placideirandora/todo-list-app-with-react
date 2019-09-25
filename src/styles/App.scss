@@ -4,27 +4,8 @@
 
 .App {
     .description {
+        margin-top: 10rem;
         text-align: center;
         font-size: 3rem;
-    }
-    
-    .start-btn {
-        text-align: center;
-        margin: 3em 0 0 22.7em;
-        padding: 10px;
-        border-radius: 10px;
-        width: 12%;
-        outline: none;
-        font-size: 28px;
-        text-transform: uppercase;
-        font-family: $saira;
-        letter-spacing: 5px;
-        transition: 0.3s ease-in-out;
-    }
-    
-    .start-btn:hover {
-        cursor: pointer;
-        background: $lightBlue;
-        color: $white;
     }
 }
