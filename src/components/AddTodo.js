@@ -17,9 +17,8 @@ class AddTodo extends Component {
     if (this.state.content) {
       this.props.addTodo(this.state.content);
       e.target.reset();
-      alert('Todo added');
     } else {
-      alert('Ooops! You cannot add an empty todo!');
+      alert('Oops! You cannot add an empty todo!');
     }
   };
   render() {
@@ -31,6 +30,7 @@ class AddTodo extends Component {
               type="text"
               placeholder="type in your todo"
               onChange={this.handleChange}
+              autoFocus
             />
             <br />
             <button>Add</button>
