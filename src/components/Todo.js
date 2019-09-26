@@ -13,7 +13,7 @@ class Todos extends Component {
         return (
           <div key={todo.id}>
             <p className="todos">
-              {todo.content}{' '}
+              {todo.content}
               <button
                 onClick={() => {
                   this.handleClick(todo.id);
