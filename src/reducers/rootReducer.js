@@ -7,6 +7,15 @@ const rootReducer = (state = initState, action) => {
     action.id = Math.floor(Math.random() * 100);
     state.todos.push(action);
   }
+  if (action.type === 'DELETE_TODO') {
+    const currentTodos = state.todos.filter(todo => {
+      return action.id !== todo.id;
+    });
+    return {
+      ...state,
+      todos: currentTodos
+    };
+  }
   return state;
 };
 
