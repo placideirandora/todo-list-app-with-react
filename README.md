@@ -1,4 +1,4 @@
-# todo-list-app-with-react.js
+# TO-DO LIST (React.js)
 A front-end web application for managing/tracking your to-dos.
 
 ## GETTING STARTED
