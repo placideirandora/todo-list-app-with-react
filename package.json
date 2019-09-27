@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/placideirandora/todo-list-app-with-react.js/issues"
   },
-  "homepage": "https://github.com/placideirandora/todo-list-app-with-react.js#readme",
+  "homepage": " https://placideirandora.github.io/todo-list-app-with-react.js/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
