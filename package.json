@@ -4,7 +4,7 @@
   "description": "A front-end web application for managing/tracking your to-dos.",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src/prod-server.js",
+    "start": "babel-node prod-server.js",
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
