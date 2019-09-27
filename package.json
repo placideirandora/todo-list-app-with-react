@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/placideirandora/todo-list-app-with-react.js#readme",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
