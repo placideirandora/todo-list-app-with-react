@@ -5,7 +5,7 @@ A front-end web application for managing/tracking your to-dos.
 
 ## DEPLOYMENT
 
-- **Heroku** - [Visit The App](https://todo-list-app-react-js.herokuapp.com//)
+- **Heroku** - [Visit The App](https://todo-list-app-react-js.herokuapp.com)
 
 
 ## GETTING STARTED
@@ -22,8 +22,22 @@ $ git clone https://github.com/placideirandora/todo-list-app-with-react.js
 $ npm install
 ```
 
-### Start The Server
+### Start The Development Server
+
+```
+$ npm run dev
+```
+
+### Start The Production Server 
+
+```
+$ npm run build
+```
 
 ```
 $ npm start
+```
+
+```
+$ Visit http://localhost:8080 with your browser
 ```
