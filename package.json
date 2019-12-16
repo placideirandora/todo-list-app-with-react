@@ -49,6 +49,5 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
