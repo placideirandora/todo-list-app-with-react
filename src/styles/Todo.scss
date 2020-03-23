@@ -5,12 +5,14 @@
   margin-top: 10rem;
   text-align: center;
   font-size: 3rem;
+  font-family: $patua;
 }
 
 .todos {
   margin-top: 2rem;
   text-align: center;
   font-size: 2.2rem;
+  font-family: $patua;
 
   button {
     margin-left: 1rem;
@@ -21,10 +23,10 @@
     outline: none;
     font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     transition: 0.3s ease-in-out;
-    font-family: $saira;
-    color: $dimGreen;
+    font-family: $patua;
+    color: $lightBlue;
   }
 
   button:hover {

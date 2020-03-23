@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import '../styles/Body.scss';
 
 const Home = () => {
   return (
-    <div>
+    <Fragment>
       <p className="description">
         Manage your todos in an effective and efficient manner!
       </p>
-    </div>
+    </Fragment>
   );
 };
 

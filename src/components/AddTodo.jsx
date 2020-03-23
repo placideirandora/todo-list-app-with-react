@@ -1,29 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions/todoActions';
+import { addTodo } from '../redux/actions/todoActions';
 import '../styles/AddTodo.scss';
 
 class AddTodo extends Component {
   state = {
     content: null
   };
+
   handleChange = e => {
     this.setState({
       content: e.target.value
     });
   };
+
   handleSubmit = e => {
     e.preventDefault();
-    if (this.state.content) {
-      this.props.addTodo(this.state.content);
+
+    const { content } = this.state;
+    const { addTodo } = this.props;
+
+    if (content) {
+      addTodo(content);
       e.target.reset();
     } else {
       alert('Oops! You cannot add an empty todo!');
     }
   };
+
   render() {
     return (
-      <div>
+      <Fragment>
         <form onSubmit={this.handleSubmit}>
           <div className="todo-wrapper">
             <input
@@ -36,7 +43,7 @@ class AddTodo extends Component {
             <button>Add</button>
           </div>
         </form>
-      </div>
+      </Fragment>
     );
   }
 }
@@ -49,7 +56,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(AddTodo);
+export default connect(null, mapDispatchToProps)(AddTodo);

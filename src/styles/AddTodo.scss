@@ -15,7 +15,8 @@ form {
       border-bottom: solid #000000;
       text-align: center;
       padding-bottom: 10px;
-      color: $dimGreen;
+      color: $lightBlue;
+      font-family: $patua;
     }
 
     button {
@@ -29,7 +30,7 @@ form {
       text-transform: uppercase;
       letter-spacing: 5px;
       transition: 0.3s ease-in-out;
-      font-family: $saira;
+      font-family: $patua;
     }
 
     button:hover {

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const About = () => {
   return (
-    <div>
+    <Fragment>
       <p className="description">
         A web application that helps you create todos and keeps track of them
       </p>
-    </div>
+    </Fragment>
   );
 };
 

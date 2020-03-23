@@ -5,5 +5,11 @@ body {
   margin: 0;
   padding: 0;
   background: $white;
-  font-family: $vollkorn;
+}
+
+.description {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: $patua;
 }
