@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../redux/actions/todoActions';
-import '../styles/AddTodo.scss';
+import { todoStyles } from '../styles/todo';
 
 class AddTodo extends Component {
   state = {
-    content: null
+    content: ''
   };
 
   handleChange = e => {
@@ -31,17 +31,16 @@ class AddTodo extends Component {
   render() {
     return (
       <Fragment>
-        <form onSubmit={this.handleSubmit}>
-          <div className="todo-wrapper">
-            <input
-              type="text"
-              placeholder="type in your todo"
-              onChange={this.handleChange}
-              autoFocus
-            />
-            <br />
-            <button>Add</button>
-          </div>
+        <form onSubmit={this.handleSubmit} style={todoStyles.form}>
+          <input
+            type="text"
+            placeholder="type in your todo"
+            onChange={this.handleChange}
+            autoFocus
+            style={todoStyles.textField}
+          />
+          <br />
+          <button style={todoStyles.formButton}>Add</button>
         </form>
       </Fragment>
     );

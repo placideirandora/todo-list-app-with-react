@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import '../styles/Body.scss';
+import { homeStyles } from '../styles/home';
 
 const Home = () => {
   return (
     <Fragment>
-      <p className="description">
+      <p style={homeStyles.paragraph}>
         Manage your todos in an effective and efficient manner!
       </p>
     </Fragment>

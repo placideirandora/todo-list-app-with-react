@@ -1,23 +1,25 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/NavBar.scss';
+import { navBarStyles } from '../../styles/navBar';
 
 const Navbar = () => {
   return (
     <Fragment>
-      <nav>
-        <Link to="/" className="logo">
+      <nav style={navBarStyles.navBar}>
+        <Link to="/" style={navBarStyles.logo}>
           TO-DO LIST
         </Link>
-        <Link to="/About" className="menu last">
-          ABOUT
-        </Link>
-        <Link to="/AddTodo" className="menu second">
-          ADD TODOS
-        </Link>
-        <Link to="/Todo" className="menu">
-          VIEW TODOS
-        </Link>
+        <menu style={navBarStyles.menuWrapper}>
+          <Link to="/Todo" style={navBarStyles.menu}>
+            VIEW TODOS
+          </Link>
+          <Link to="/AddTodo" style={navBarStyles.menu}>
+            ADD TODOS
+          </Link>
+          <Link to="/About" style={navBarStyles.menu}>
+            ABOUT
+          </Link>
+        </menu>
       </nav>
     </Fragment>
   );
