@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/shared/NavBar';
-import Home from './Components/Home';
-import About from './Components/About';
-import Todo from './Components/Todo';
-import AddTodo from './Components/AddTodo';
+import Home from './components/Home';
+import About from './components/About';
+import Todo from './components/Todo';
+import AddTodo from './components/AddTodo';
 import Footer from './components/shared/Footer';
 import { appStyles } from './styles/app';
 import './styles/shared/Body.scss';

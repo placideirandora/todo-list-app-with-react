@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import { deleteTodo } from '../redux/actions/todoActions';
+import { removeTodo } from '../redux/actions/todoActions';
 import { todoStyles } from '../styles/todo';
 import image from '../assets/images/no-data';
 
-const Todo = ({ todos, deleteTodo }) => {
+const Todo = ({ todos, removeTodo }) => {
   const handleClick = todo => {
-    deleteTodo(todo);
+    removeTodo(todo);
   };
 
   const todoList = todos.length ? (
@@ -46,8 +46,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    deleteTodo: id => {
-      dispatch(deleteTodo(id));
+    removeTodo: id => {
+      dispatch(removeTodo(id));
     }
   };
 };

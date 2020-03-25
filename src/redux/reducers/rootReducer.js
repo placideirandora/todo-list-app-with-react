@@ -6,11 +6,12 @@ const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       action.id = Math.floor(Math.random() * 1000);
-      state.todos.push(action);
 
-      return state;
+      return {
+        todos: [...state.todos, action]
+      };
 
-    case 'DELETE_TODO':
+    case 'REMOVE_TODO':
       const currentTodos = state.todos.filter(todo => {
         return action.payload !== todo.id;
       });
