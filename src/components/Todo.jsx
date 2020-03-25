@@ -1,34 +1,35 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { deleteTodo } from '../redux/actions/todoActions';
-import '../styles/Todo.scss';
+import { todoStyles } from '../styles/todo';
 
 const Todo = ({ todos, deleteTodo }) => {
+  const handleClick = todo => {
+    deleteTodo(todo);
+  };
+
   const todoList = todos.length ? (
     todos.map((todo, index) => {
       return (
-        <div key={index}>
-          <p className="todos">
-            {index + 1 + '.'} {''} {todo.payload.toUpperCase()}
+        <section key={index}>
+          <p style={todoStyles.todos}>
+            {index + 1 + '.'} {''} {todo.payload}
             <button
               onClick={() => {
                 handleClick(todo.id);
               }}
+              style={todoStyles.todoButton}
             >
               Complete
             </button>
-            <hr />
           </p>
-        </div>
+          <hr />
+        </section>
       );
     })
   ) : (
-    <p className="no-todos"> You don't have any todos </p>
+    <p style={todoStyles.noTodos}> You don't have any todos </p>
   );
-
-  const handleClick = todo => {
-    deleteTodo(todo);
-  };
 
   return <Fragment>{todoList}</Fragment>;
 };

@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import '../../styles/Footer.scss';
+import { footerStyles } from '../../styles/footer';
 
 const Footer = () => {
   return (
     <Fragment>
-      <p>
+      <p style={footerStyles.paragraph}>
         Copyright &copy; 2019 - {new Date().getFullYear()} -- TO-DO LIST -
         Placide IRANDORA
       </p>
