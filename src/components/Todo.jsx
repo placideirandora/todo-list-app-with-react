@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { deleteTodo } from '../redux/actions/todoActions';
 import { todoStyles } from '../styles/todo';
+import image from '../assets/images/no-data';
 
 const Todo = ({ todos, deleteTodo }) => {
   const handleClick = todo => {
@@ -28,7 +29,10 @@ const Todo = ({ todos, deleteTodo }) => {
       );
     })
   ) : (
-    <p style={todoStyles.noTodos}> You don't have any todos </p>
+    <section style={todoStyles.noTodosWrapper}>
+      <img src={image} alt="image" width="400" height="300" />
+      <p style={todoStyles.noTodos}> You don't have any todos </p>
+    </section>
   );
 
   return <Fragment>{todoList}</Fragment>;

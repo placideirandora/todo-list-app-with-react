@@ -19,11 +19,15 @@ module.exports = {
       {
         test: /\.(s*)css$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif|woff(2)?|ttf|eot|)$/,
+        use: ['file-loader']
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx', '.svg', '.ttf']
   },
   plugins: [
     new HtmlWebPackPlugin({

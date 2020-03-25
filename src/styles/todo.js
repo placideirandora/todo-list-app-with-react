@@ -1,8 +1,8 @@
 import { fonts } from './shared/fonts';
 
 export const todoStyles = {
-  noTodos: {
-    paddingTop: '10rem',
+  noTodosWrapper: {
+    paddingTop: '2rem',
     textAlign: 'center',
     fontSize: '2.6rem',
     letterSpacing: '0.03rem',
@@ -34,6 +34,11 @@ export const todoStyles = {
     cursor: 'pointer'
   },
 
+  addTodoWrapper: {
+    textAlign: 'center',
+    paddingTop: '2rem'
+  },
+
   textField: {
     width: '80%',
     border: 'none',
@@ -45,10 +50,10 @@ export const todoStyles = {
     fontFamily: fonts.patua
   },
 
-  form: { marginTop: '2.6rem', padding: '10rem 0 0 12rem' },
+  form: { paddingTop: '2rem' },
 
   formButton: {
-    margin: '2rem 0 0 20rem',
+    marginTop: '2rem',
     textAlign: 'center',
     padding: '6px',
     border: '2px solid #000000',

@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Amatic+SC|Cinzel|Francois+One|Kalam|Patua+One|Permanent+Marker|Saira+Stencil+One|Squada+One&display=swap');
+@font-face {
+  font-family: 'Saira Stencil One';
+  src: url('../../assets/fonts/Saira_Stencil_One/SairaStencilOne-Regular')
+    format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Patua One';
+  src: url('../../assets/fonts/Patua_One/PatuaOne-Regular') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   margin: 0;

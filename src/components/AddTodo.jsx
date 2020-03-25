@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../redux/actions/todoActions';
 import { todoStyles } from '../styles/todo';
+import image from '../assets/images/add';
 
 class AddTodo extends Component {
   state = {
@@ -31,17 +32,20 @@ class AddTodo extends Component {
   render() {
     return (
       <Fragment>
-        <form onSubmit={this.handleSubmit} style={todoStyles.form}>
-          <input
-            type="text"
-            placeholder="type in your todo"
-            onChange={this.handleChange}
-            autoFocus
-            style={todoStyles.textField}
-          />
-          <br />
-          <button style={todoStyles.formButton}>Add</button>
-        </form>
+        <section style={todoStyles.addTodoWrapper}>
+          <img src={image} alt="image" width="400" height="300" />
+          <form onSubmit={this.handleSubmit} style={todoStyles.form}>
+            <input
+              type="text"
+              placeholder="type in your todo"
+              onChange={this.handleChange}
+              autoFocus
+              style={todoStyles.textField}
+            />
+            <br />
+            <button style={todoStyles.formButton}>Add</button>
+          </form>
+        </section>
       </Fragment>
     );
   }
