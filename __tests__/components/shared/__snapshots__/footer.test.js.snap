@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component Test Cases should render the component without any failure 1`] = `
+<Fragment>
+  <p
+    style={
+      Object {
+        "color": "grey",
+        "fontFamily": "Saira Stencil One",
+        "fontSize": "25px",
+        "textAlign": "center",
+      }
+    }
+  >
+    Copyright © 2019 - 
+    2020
+     -- TO-DO LIST - Placide IRANDORA
+  </p>
+</Fragment>
+`;

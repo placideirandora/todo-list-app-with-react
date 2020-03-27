@@ -5,7 +5,7 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      action.id = Math.floor(Math.random() * 1000);
+      !action.id ? (action.id = Math.floor(Math.random() * 1000)) : null;
 
       return {
         todos: [...state.todos, action]

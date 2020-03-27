@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo Action Test Cases should dispatch the correct action and payload for adding a todo 1`] = `
+Array [
+  Object {
+    "payload": "Read Books",
+    "type": "ADD_TODO",
+  },
+]
+`;
+
+exports[`Todo Action Test Cases should dispatch the correct action and payload for completing a todo 1`] = `
+Array [
+  Object {
+    "payload": 1,
+    "type": "REMOVE_TODO",
+  },
+]
+`;

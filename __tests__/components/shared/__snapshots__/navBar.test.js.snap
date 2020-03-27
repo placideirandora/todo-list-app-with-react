@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Component Test Cases should render the component without any failure 1`] = `
+<Fragment>
+  <nav
+    style={
+      Object {
+        "backgroundColor": "#46a1de",
+        "fontFamily": "Saira Stencil One",
+        "padding": "0 10%",
+      }
+    }
+  >
+    <Link
+      style={
+        Object {
+          "color": "white",
+          "fontSize": "3.5rem",
+          "textDecoration": "none",
+        }
+      }
+      to="/"
+    >
+      TO-DO LIST
+    </Link>
+    <menu
+      style={
+        Object {
+          "float": "right",
+          "marginTop": "1.5rem",
+        }
+      }
+    >
+      <Link
+        style={
+          Object {
+            "color": "white",
+            "fontSize": "2rem",
+            "padding": "1rem",
+            "textDecoration": "none",
+          }
+        }
+        to="/Todo"
+      >
+        VIEW TODOS
+      </Link>
+      <Link
+        style={
+          Object {
+            "color": "white",
+            "fontSize": "2rem",
+            "padding": "1rem",
+            "textDecoration": "none",
+          }
+        }
+        to="/AddTodo"
+      >
+        ADD TODOS
+      </Link>
+      <Link
+        style={
+          Object {
+            "color": "white",
+            "fontSize": "2rem",
+            "padding": "1rem",
+            "textDecoration": "none",
+          }
+        }
+        to="/About"
+      >
+        ABOUT
+      </Link>
+    </menu>
+  </nav>
+</Fragment>
+`;

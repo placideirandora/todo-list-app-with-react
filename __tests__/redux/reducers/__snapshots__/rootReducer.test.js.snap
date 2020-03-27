@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root Reducer Test Cases should return the correct state while added a todo 1`] = `
+Object {
+  "todos": Array [
+    Object {
+      "id": 1,
+      "payload": "Read Books",
+      "type": "ADD_TODO",
+    },
+  ],
+}
+`;
+
+exports[`Root Reducer Test Cases should return the correct state while removed a todo 1`] = `
+Object {
+  "todos": Array [],
+}
+`;
+
+exports[`Root Reducer Test Cases should return the default state that is empty 1`] = `
+Object {
+  "todos": Array [],
+}
+`;

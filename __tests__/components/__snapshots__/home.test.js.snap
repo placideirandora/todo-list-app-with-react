@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component Test Cases should render the component without any failure 1`] = `
+<Fragment>
+  <section
+    style={
+      Object {
+        "fontFamily": "Patua One",
+        "fontSize": "2.6rem",
+        "letterSpacing": "0.03rem",
+        "paddingTop": "2rem",
+        "textAlign": "center",
+        "textTransform": "capitalize",
+      }
+    }
+  >
+    <img
+      alt="image"
+      height="300"
+      src="todo.svg"
+      width="400"
+    />
+    <p>
+      Manage your todos in an effective and efficient manner!
+    </p>
+  </section>
+</Fragment>
+`;

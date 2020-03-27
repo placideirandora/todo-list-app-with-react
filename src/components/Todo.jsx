@@ -4,7 +4,7 @@ import { removeTodo } from '../redux/actions/todoActions';
 import { todoStyles } from '../styles/todo';
 import image from '../assets/images/no-data';
 
-const Todo = ({ todos, removeTodo }) => {
+export const Todo = ({ todos, removeTodo }) => {
   const handleClick = todo => {
     removeTodo(todo);
   };

@@ -4,7 +4,7 @@ import { addTodo } from '../redux/actions/todoActions';
 import { todoStyles } from '../styles/todo';
 import image from '../assets/images/add';
 
-class AddTodo extends Component {
+export class AddTodo extends Component {
   state = {
     content: ''
   };
