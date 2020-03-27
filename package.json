@@ -10,8 +10,9 @@
     "start": "babel-node prod-server.js",
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,6 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.4.2",
     "express": "^4.17.1",
-    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
@@ -53,6 +53,13 @@
     "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
-    "file-loader": "^6.0.0"
+    "babel-jest": "^25.2.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "file-loader": "^6.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.2.1",
+    "redux-mock-store": "^1.5.4"
   }
 }
