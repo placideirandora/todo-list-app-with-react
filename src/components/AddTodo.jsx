@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { addTodo } from '../redux/actions/todoActions';
 import { todoStyles } from '../styles/todo';
-import image from '../assets/images/add';
+import addSvg from '../assets/images/add';
+import Image from './shared/Image';
 
 export class AddTodo extends Component {
   state = {
@@ -33,7 +35,7 @@ export class AddTodo extends Component {
     return (
       <Fragment>
         <section style={todoStyles.addTodoWrapper}>
-          <img src={image} alt="image" width="400" height="300" />
+          <Image source={addSvg} />
           <form onSubmit={this.handleSubmit} style={todoStyles.form}>
             <input
               type="text"
@@ -57,6 +59,10 @@ export const mapDispatchToProps = dispatch => {
       dispatch(addTodo(content));
     }
   };
+};
+
+AddTodo.propTypes = {
+  addTodo: PropTypes.func.isRequired
 };
 
 export default connect(null, mapDispatchToProps)(AddTodo);

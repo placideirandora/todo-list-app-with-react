@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component Test Cases should render the component without any failure 1`] = `
+<Fragment>
+  <img
+    alt="image"
+    height={300}
+    src="image location"
+    width={400}
+  />
+</Fragment>
+`;

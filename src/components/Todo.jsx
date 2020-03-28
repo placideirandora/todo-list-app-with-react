@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { removeTodo } from '../redux/actions/todoActions';
 import { todoStyles } from '../styles/todo';
-import image from '../assets/images/no-data';
+import noDataSvg from '../assets/images/no-data';
+import Image from './shared/Image';
 
 export const Todo = ({ todos, removeTodo }) => {
   const handleClick = todo => {
@@ -30,7 +32,7 @@ export const Todo = ({ todos, removeTodo }) => {
     })
   ) : (
     <section style={todoStyles.noTodosWrapper}>
-      <img src={image} alt="image" width="400" height="300" />
+      <Image source={noDataSvg} />
       <p style={todoStyles.noTodos}> You don't have any todos </p>
     </section>
   );
@@ -50,6 +52,11 @@ export const mapDispatchToProps = dispatch => {
       dispatch(removeTodo(id));
     }
   };
+};
+
+Todo.propTypes = {
+  todos: PropTypes.arrayOf(Object).isRequired,
+  removeTodo: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todo);

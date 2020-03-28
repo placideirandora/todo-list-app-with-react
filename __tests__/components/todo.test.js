@@ -8,17 +8,20 @@ import {
   mapDispatchToProps
 } from '../../src/components/Todo';
 
+const todos = [
+  { id: 1, payload: 'Read Books', type: 'ADD_TODO' },
+  { id: 2, payload: 'Watch Movies', type: 'ADD_TODO' },
+  { id: 3, payload: 'Play Games', type: 'ADD_TODO' }
+];
+
 const posProps = {
-  todos: [
-    { id: 1, payload: 'Read Books', type: 'ADD_TODO' },
-    { id: 2, payload: 'Watch Movies', type: 'ADD_TODO' },
-    { id: 3, payload: 'Play Games', type: 'ADD_TODO' }
-  ],
+  todos,
   removeTodo: jest.fn()
 };
 
 const negProps = {
-  todos: []
+  todos: [],
+  removeTodo: jest.fn()
 };
 
 describe('Todo Component Test Cases - Positive - No Store', () => {
@@ -53,11 +56,7 @@ describe('Todo Component Test Cases - Negative - No Store', () => {
 describe('Todo Component Test Cases - mapStateToProps & mapDispatchToProps', () => {
   it('should pass the state to the mapStateToProps function', () => {
     const initialState = {
-      todos: [
-        { id: 1, payload: 'Read Books', type: 'ADD_TODO' },
-        { id: 2, payload: 'Watch Movies', type: 'ADD_TODO' },
-        { id: 3, payload: 'Play Games', type: 'ADD_TODO' }
-      ]
+      todos
     };
 
     expect(mapStateToProps(initialState).todos.length).toEqual(3);

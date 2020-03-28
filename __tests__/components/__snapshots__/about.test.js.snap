@@ -14,11 +14,10 @@ exports[`About Component Test Cases should render the component without any fail
       }
     }
   >
-    <img
-      alt="image"
-      height="300"
-      src="complete.svg"
-      width="400"
+    <Image
+      height={300}
+      source="complete.svg"
+      width={400}
     />
     <p>
       A web application that helps you create todos and keeps track of them
