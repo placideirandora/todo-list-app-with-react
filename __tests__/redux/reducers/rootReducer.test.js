@@ -9,20 +9,29 @@ describe('Root Reducer Test Cases', () => {
   });
 
   it('should return the correct state while added a todo', () => {
-    const firstAction = { type: ADD_TODO, payload: 'Read Books', id: 1 };
+    const action = { type: ADD_TODO, payload: 'Read Books', id: 1 };
     const expectedState = {
       todos: [{ type: ADD_TODO, payload: 'Read Books', id: 1 }]
     };
 
-    expect(rootReducer(undefined, firstAction)).toEqual(expectedState);
+    expect(rootReducer(undefined, action)).toEqual(expectedState);
+  });
+
+  it('should return a defined state while added a todo without id', () => {
+    const action = { type: ADD_TODO, payload: 'Make Video Games' };
+
+    expect(rootReducer(undefined, action)).toBeDefined();
   });
 
   it('should return the correct state while removed a todo', () => {
-    const firstAction = { type: REMOVE_TODO, id: 1 };
+    const state = {
+      todos: [{ type: ADD_TODO, payload: 'Watch Movies', id: 1 }]
+    };
+    const action = { type: REMOVE_TODO, payload: 1 };
     const expectedState = {
       todos: []
     };
 
-    expect(rootReducer(undefined, firstAction)).toEqual(expectedState);
+    expect(rootReducer(state, action)).toEqual(expectedState);
   });
 });

@@ -20,7 +20,7 @@ module.exports = {
 
   // Mock styles
   moduleNameMapper: {
-    '\\.(css|less|sass)$': 'identity-obj-proxy'
+    '\\.(css|scss)$': 'identity-obj-proxy'
   },
 
   // Mock images
@@ -33,10 +33,10 @@ module.exports = {
   // Define code coverage rule
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
+      branches: 90,
+      functions: 90,
+      lines: 90,
+      statements: 90
     }
   }
 };

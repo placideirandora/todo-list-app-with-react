@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import * as adapter from '../config/enzyme.config';
-import WholeAddTodo, { AddTodo } from '../../src/components/AddTodo';
+import { AddTodo, mapDispatchToProps } from '../../src/components/AddTodo';
 
 const props = {
   addTodo: jest.fn()
@@ -69,5 +69,17 @@ describe('AddTodo Component Test Cases - Negative - No Store', () => {
     expect(component.state().content).toEqual('');
     expect(component.state().content).toEqual('');
     expect(alert).toHaveBeenCalled();
+  });
+});
+
+describe('Todo Component Test Cases - mapStateToProps & mapDispatchToProps', () => {
+  it('should add a todo when add button is clicked', () => {
+    const dispatch = jest.fn();
+
+    mapDispatchToProps(dispatch).addTodo('Read Books');
+    expect(dispatch.mock.calls[0][0]).toEqual({
+      type: 'ADD_TODO',
+      payload: 'Read Books'
+    });
   });
 });

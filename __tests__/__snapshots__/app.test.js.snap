@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Wrapper Test Case should render the component wrapper without any failure 1`] = `
+<BrowserRouter>
+  <Navbar />
+  <section
+    style={
+      Object {
+        "height": "78vh",
+        "margin": "0 10%",
+        "maxHeight": "78vh",
+        "overflow": "scroll",
+        "width": "80%",
+      }
+    }
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Todo)",
+            "type": [Function],
+          }
+        }
+        path="/Todo"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(AddTodo)",
+            "type": [Function],
+          }
+        }
+        path="/AddTodo"
+      />
+      <Route
+        component={[Function]}
+        path="/About"
+      />
+    </Switch>
+  </section>
+  <Footer />
+</BrowserRouter>
+`;

@@ -1,21 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import configureStore from 'redux-mock-store';
 import * as adapter from '../config/enzyme.config';
-import WholeTodo, { Todo } from '../../src/components/Todo';
-
-const mockStore = configureStore();
-
-const initialState = {
-  todos: [
-    { id: 1, payload: 'Read Books', type: 'ADD_TODO' },
-    { id: 2, payload: 'Watch Movies', type: 'ADD_TODO' },
-    { id: 3, payload: 'Play Games', type: 'ADD_TODO' }
-  ]
-};
-
-const store = mockStore(initialState);
+import {
+  Todo,
+  mapStateToProps,
+  mapDispatchToProps
+} from '../../src/components/Todo';
 
 const posProps = {
   todos: [
@@ -59,12 +50,26 @@ describe('Todo Component Test Cases - Negative - No Store', () => {
   });
 });
 
-describe('Todo Component Test Cases - Positive - With Store', () => {
-  const component = shallow(<WholeTodo store={store} />);
+describe('Todo Component Test Cases - mapStateToProps & mapDispatchToProps', () => {
+  it('should pass the state to the mapStateToProps function', () => {
+    const initialState = {
+      todos: [
+        { id: 1, payload: 'Read Books', type: 'ADD_TODO' },
+        { id: 2, payload: 'Watch Movies', type: 'ADD_TODO' },
+        { id: 3, payload: 'Play Games', type: 'ADD_TODO' }
+      ]
+    };
 
-  it('should render the component without failure', () => {
-    const fullComponent = component.dive();
+    expect(mapStateToProps(initialState).todos.length).toEqual(3);
+  });
 
-    expect(fullComponent.exists()).toBeTruthy();
+  it('should remove the todo when complete button is clicked', () => {
+    const dispatch = jest.fn();
+
+    mapDispatchToProps(dispatch).removeTodo(1);
+    expect(dispatch.mock.calls[0][0]).toEqual({
+      type: 'REMOVE_TODO',
+      payload: 1
+    });
   });
 });
