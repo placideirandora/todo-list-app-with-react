@@ -8,8 +8,7 @@ exports[`App Component Wrapper Test Case should render the component wrapper wit
       Object {
         "height": "78vh",
         "margin": "0 10%",
-        "maxHeight": "78vh",
-        "overflow": "scroll",
+        "maxHeight": "75vh",
         "width": "80%",
       }
     }

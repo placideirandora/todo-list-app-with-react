@@ -7,7 +7,7 @@ import noDataSvg from '../assets/images/no-data';
 import Image from './shared/Image';
 
 export const Todo = ({ todos, removeTodo }) => {
-  const handleClick = todo => {
+  const handleClick = (todo) => {
     removeTodo(todo);
   };
 
@@ -37,26 +37,30 @@ export const Todo = ({ todos, removeTodo }) => {
     </section>
   );
 
-  return <Fragment>{todoList}</Fragment>;
+  return (
+    <Fragment>
+      <section style={todoStyles.todosWrapper}>{todoList}</section>
+    </Fragment>
+  );
 };
 
-export const mapStateToProps = state => {
+export const mapStateToProps = (state) => {
   return {
-    todos: state.todos
+    todos: state.todos,
   };
 };
 
-export const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = (dispatch) => {
   return {
-    removeTodo: id => {
+    removeTodo: (id) => {
       dispatch(removeTodo(id));
-    }
+    },
   };
 };
 
 Todo.propTypes = {
   todos: PropTypes.arrayOf(Object).isRequired,
-  removeTodo: PropTypes.func.isRequired
+  removeTodo: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todo);

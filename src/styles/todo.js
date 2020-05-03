@@ -7,7 +7,7 @@ export const todoStyles = {
     fontSize: '2.6rem',
     letterSpacing: '0.03rem',
     textTransform: 'capitalize',
-    fontFamily: fonts.patua
+    fontFamily: fonts.patua,
   },
 
   todos: {
@@ -16,7 +16,7 @@ export const todoStyles = {
     fontSize: '2.3rem',
     letterSpacing: '0.05rem',
     textTransform: 'capitalize',
-    fontFamily: fonts.patua
+    fontFamily: fonts.patua,
   },
 
   todoButton: {
@@ -31,12 +31,12 @@ export const todoStyles = {
     transition: '0.3s ease-in-out',
     fontFamily: fonts.patua,
     color: 'rgb(70, 161, 222)',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
 
   addTodoWrapper: {
     textAlign: 'center',
-    paddingTop: '2rem'
+    paddingTop: '2rem',
   },
 
   textField: {
@@ -47,7 +47,7 @@ export const todoStyles = {
     borderBottom: 'solid #000000',
     textAlign: 'center',
     paddingBottom: '10px',
-    fontFamily: fonts.patua
+    fontFamily: fonts.patua,
   },
 
   form: { paddingTop: '2rem' },
@@ -65,6 +65,14 @@ export const todoStyles = {
     letterSpacing: '5px',
     transition: '0.3s ease-in-out',
     fontFamily: fonts.patua,
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
+
+  todosWrapper: {
+    overflow: 'auto',
+    maxHeight: '70vh',
+    height: '70vh',
+    width: '80%',
+    marginLeft: '10%'
+  },
 };
