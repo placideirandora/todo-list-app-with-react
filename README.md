@@ -19,7 +19,7 @@ A front-end web application for managing/tracking your to-dos.
 ### Clone The Project
 
 ```
-$ git clone https://github.com/placideirandora/todo-list-app-with-react.js
+$ git clone https://github.com/placiderapson/todo-list-app-with-react.js
 ```
 
 ### Install Required Dependencies
